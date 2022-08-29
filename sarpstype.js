@@ -1,7 +1,6 @@
 let displayQuote = document.querySelector('.quote-display')
 let inputQuote = document.querySelector('.quote-input')
-let allButto = document.querySelector('.container').querySelectorAll('button')
-console.log(allButto)
+let allButton = document.querySelector('.container').querySelectorAll('button')
 
 function generateQuote(number){
 	if(number == 1){
@@ -29,12 +28,14 @@ function generateQuote(number){
 			return'Telecommunication'		
 	}
 	else if(number == 9){
-		return 'Anticipation is foolishness'
+		return 'Anticipation without solution is foolishness'
 	}
 	else if(number == 10){
 		return'At long last the battle has ended'
 	}
 }
+
+
 
 inputQuote.addEventListener('input',function(){
 	const arrayDisplayQuote = displayQuote.querySelectorAll('span')
@@ -45,6 +46,8 @@ inputQuote.addEventListener('input',function(){
 			keySpan.classList.remove('correct')
 			keySpan.classList.remove('incorrect')
 		}
+		
+		
 	
 		else if(character === keySpan.innerText){
 			keySpan.classList.add('correct')
@@ -54,7 +57,8 @@ inputQuote.addEventListener('input',function(){
 			keySpan.classList.remove('correct')
 			keySpan.classList.add('incorrect')
 		}
-	}) 
+	})
+
 })
 
 
@@ -77,4 +81,40 @@ function getNewQuote(){
 	inputQuote.value = null
 }
 
-getNewQuote()
+getNewQuote() 
+
+let keyOne = document.querySelector('#key-one')
+let keyTwo = document.querySelector('#key-two')
+let keyThree = document.querySelector('#key-three')
+
+
+inputQuote.addEventListener('keypress',function(event){
+		if(event.key  == '2'){
+			keyTwo.classList.add('active')
+			keyTwo.classList.remove('notActive')
+		}
+		else if(event.key != '2'){
+			keyTwo.classList.add('notActive')
+			keyTwo.classList.remove('active')
+		}
+		
+		else if(event.key == '1'){
+			keyOne.classList.add('active')
+			keyOne.classList.remove('notActive')
+		}
+		else if(event.key != '1'){
+			keyTwo.classList.add('notActive')
+			keyTwo.classList.remove('active')
+		}
+		
+		else if(event.key  == '3'){
+			keyThree.classList.add('active')
+			keyThree.classList.remove('notActive')
+		}
+		else if(event.key != '3'){
+			keyThree.classList.add('notActive')
+			keyThree.classList.remove('active')
+		}
+		
+		console.log(event)
+})
