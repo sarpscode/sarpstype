@@ -48,7 +48,7 @@ inputQuote.addEventListener('input',function(){
 		}
 		
 		
-	
+		
 		else if(character === keySpan.innerText){
 			keySpan.classList.add('correct')
 			keySpan.classList.remove('incorrect')
@@ -117,4 +117,8 @@ inputQuote.addEventListener('keypress',function(event){
 		}
 		
 		console.log(event)
+})
+
+document.querySelector("#key-backspace").addEventListener('click',function(){
+	window.location.reload(true);
 })
