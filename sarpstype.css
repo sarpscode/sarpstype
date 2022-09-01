@@ -21,7 +21,8 @@ body{
 	width:700px;
 	max-width:90%;
 	background:skyblue;
-	margin-bottom:-15%;
+	margin-bottom:2%;
+	margin-top:-3%;
 }
 .quote-display{
 	margin-bottom:1rem;
@@ -53,8 +54,8 @@ body{
 	border-color:black;
 }
 .container{
-		margin:280px 0 0 180px;
-		width:;
+		margin:280px 0 0 202px;
+		margin-top:-0.1px
 }
 .row-one,.row-two,.row-three,.row-four,.row-five{
 	width:100%;
@@ -79,6 +80,8 @@ button:active{
 #key-backspace{
 	width:115px;
 	border-radius:10px;
+	color:red;
+	font-weight:bold;
 }
 #key-tab{
 	width:85px;
@@ -116,6 +119,12 @@ button:active{
 .incorrect{
 	color:red;
 	text-decoration:underline;
+}
+.next{
+	color:blue;
+	padding-left:60%;
+	font-size:1.5rem;
+	font-weight:bold;
 }
 
 .active{
@@ -327,6 +336,7 @@ button{
 #key-backspace{
 	width:100px;
 	border-radius:10px;
+	
 }
 #key-tab{
 	width:70px;
@@ -358,6 +368,6 @@ button{
 	border-radius:.5rem;
 	width:650px;
 	max-width:90%;
-	margin-bottom:-10%;
+	margin-top:-1%;
 }
 }
